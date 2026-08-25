@@ -59,6 +59,8 @@ Além disso, o ORDER BY foi utilizado para organizar os gêneros em ordem alfab�
 
 <img width="591" height="266" alt="Captura de tela 2026-08-25 101322" src="https://github.com/user-attachments/assets/edc5f15b-d14d-4e9a-b2ce-3403678f8a75" />
 
+### 4. Descubra quantos autores diferentes existem.
+
 Para descobrir a quantidade de autores diferentes cadastrados na tabela, foi utilizado COUNT em conjunto com DISTINCT.
 
 > SELECT COUNT(DISTINCT autor) AS quantidade_autores
@@ -68,6 +70,7 @@ Para descobrir a quantidade de autores diferentes cadastrados na tabela, foi uti
 
 O DISTINCT garante que um mesmo autor seja contado apenas uma vez.
 
+### 5. Liste os 5 livros mais caros da base (título e preço).
 Para encontrar os cinco livros com maior preço, os registros foram ordenados de forma decrescente utilizando ORDER BY preco DESC.
 
 > SELECT titulo, preco
@@ -78,6 +81,8 @@ Para encontrar os cinco livros com maior preço, os registros foram ordenados de
 <img width="679" height="158" alt="Captura de tela 2026-08-25 102603" src="https://github.com/user-attachments/assets/94b20672-3ec8-4530-b4db-4c25affeb188" />
 
 O LIMIT 5 faz com que somente os cinco primeiros resultados sejam apresentados.
+
+### 6. Liste os 5 livros com menor estoque (título e estoque).
 
 Foi feita uma consulta semelhante, dessa vez ordenando o estoque de forma crescente:
 
@@ -90,7 +95,9 @@ Foi feita uma consulta semelhante, dessa vez ordenando o estoque de forma cresce
 
 Assim, os cinco livros com menor quantidade disponível são exibidos.
 
-## 🔢 4. Filtros numéricos
+## 🔢 Bloco 2 — Filtros numéricos
+
+### 7. Mostre titulo e estoque de todos os livros do gênero Técnico.
 
 Na segunda parte da atividade, foram utilizados operadores de comparação e o BETWEEN para realizar filtros específicos.
 
@@ -102,6 +109,8 @@ Foi utilizado o WHERE para selecionar somente os livros cujo gênero é Técnico
 
 <img width="668" height="425" alt="Captura de tela 2026-08-25 103107" src="https://github.com/user-attachments/assets/5cac84bf-0b33-4877-88a5-2069c117ce07" />
 
+### 8. Mostre titulo e preco dos livros que custam mais de R$ 200,00.
+
 O operador > foi utilizado para encontrar livros cujo preço é maior que 200.
 
 > SELECT titulo, preco
@@ -109,6 +118,8 @@ O operador > foi utilizado para encontrar livros cujo preço é maior que 200.
 > WHERE preco > 200;
 
 <img width="676" height="277" alt="Captura de tela 2026-08-25 103314" src="https://github.com/user-attachments/assets/e9941362-a183-447b-8ee9-0e2f9caa0cd4" />
+
+### 9. Mostre titulo e preco dos livros com preço entre R$ 40,00 e R$ 70,00.
 
 Para selecionar os livros dentro de uma faixa de preço, foi utilizado o BETWEEN.
 
@@ -120,6 +131,8 @@ Para selecionar os livros dentro de uma faixa de preço, foi utilizado o BETWEEN
 
 O BETWEEN considera os valores dos limites da faixa.
 
+### 10. Mostre os livros com estoque abaixo de 5 unidades (situação de reposição urgente)
+
 Foi utilizado o operador < para encontrar livros com menos de cinco unidades disponíveis.
 
 > SELECT titulo
@@ -129,6 +142,8 @@ Foi utilizado o operador < para encontrar livros com menos de cinco unidades dis
 <img width="633" height="281" alt="Captura de tela 2026-08-25 103819" src="https://github.com/user-attachments/assets/c698c470-1c9e-4d7a-96d3-8d4d6d30520f" />
 
 Essa consulta permite identificar livros que estão com estoque baixo e precisam de reposição.
+
+### 11. Liste os livros publicados antes de 1900, ordenados do mais antigo para o mais recente.
 
 Foi utilizado o operador < para filtrar os livros publicados antes de 1900.
 
@@ -140,6 +155,8 @@ Além disso, os resultados foram ordenados pelo ano de publicação, do mais ant
 > ORDER BY ano_publicacao;
 
 <img width="696" height="431" alt="Captura de tela 2026-08-25 104000" src="https://github.com/user-attachments/assets/121bec2d-4f0d-43d5-822a-c693ebd80a9b" />
+
+### 12. Liste os livros publicados entre 2010 e 2020, mostrando título, ano e gênero.
 
 Por fim, foi utilizado novamente o BETWEEN para selecionar os livros publicados entre 2010 e 2020.
 
